@@ -1,6 +1,3 @@
-Got it! Let's add some energy to it! Here's a more upbeat and exciting version of the README:
-
----
 
 # 🎉 Simple Multiplication App 🚀
 
