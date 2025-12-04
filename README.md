@@ -1,6 +1,6 @@
 
 # 🎉 Simple Multiplication App 🚀
-[![🕹️ Play Now!](https://img.shields.io/badge/PLAY%20NOW-FF5733?style=for-the-badge&logo=appveyor)](https://mohammedalhaj14.github.io/multiplicationApp/)
+[![🕹️ CHECK Now!](https://img.shields.io/badge/PLAY%20NOW-FF5733?style=for-the-badge&logo=appveyor)](https://mohammedalhaj14.github.io/multiplicationApp/)
 ## Welcome to the Fun Zone of Multiplication! ✨
 
 The **Simple Multiplication App** is here to make learning multiplication exciting and fun for kids of all ages! With an easy-to-use design and a score system to motivate young learners, this app is perfect for practicing and mastering multiplication skills—one question at a time. 💡
