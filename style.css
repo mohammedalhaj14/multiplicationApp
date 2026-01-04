@@ -1,54 +1,126 @@
-body{
+:root {
+    --bg: #0b0e14;
+    --glass: rgba(255, 255, 255, 0.03);
+    --accent: #6366f1;
+    --text: #f8fafc;
+    --danger: #ef4444;
+    --success: #22c55e;
+}
+
+body {
     margin: 0;
-    display:flex ;
+    display: flex;
     justify-content: center;
-    height: 100vh;
     align-items: center;
-    background-color: blue;
-    text-align: center;
-    font-family: cursive;
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #1e293b 0%, #0b0e14 100%);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 20px; /* Prevents touching screen edges on mobile */
 }
-.form{
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,.3);
-    border: 10px;
-    margin: 10px;
-}
-.input{
-    display: block;
+
+.app-container {
+    background: var(--glass);
+    padding: 30px;
+    border-radius: 28px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.08);
     width: 100%;
-    box-sizing: border-box;
-    font-size: 30px;
+    max-width: 420px; /* Ideal desktop width */
     text-align: center;
-    padding: 10px;
-    border: solid 4px green;
-
-
+    position: relative;
+    overflow: hidden;
 }
-.input::placeholder{
-    color: lightgray;
-    font-family: cursive;
+
+.timer-bar-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: rgba(255,255,255,0.05);
 }
-.btn{
-    background-color: green;
+
+.timer-bar-fill {
+    height: 100%;
+    background: var(--accent);
+    width: 100%;
+    transition: width 1s linear;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.mode-selector {
+    display: flex;
+    flex-wrap: wrap; /* Wraps on very small screens */
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.mode-btn {
+    background: var(--glass);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    flex: 1; /* Makes buttons equal width */
+    min-width: 45px;
+    height: 48px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: 0.2s;
+}
+
+.mode-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+#question { font-size: clamp(1.5rem, 5vw, 2rem); margin-bottom: 15px; }
+
+.feedback-text {
+    height: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: var(--danger);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.input {
+    width: 100%;
+    padding: 15px;
+    background: rgba(0,0,0,0.3);
+    border: 2px solid #333;
+    border-radius: 14px;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--accent);
     color: white;
     border: none;
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 20px;
-    font-family: cursive;
-    margin: 20 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,.3);
+    border-radius: 12px;
+    font-weight: 700;
     cursor: pointer;
 }
-.btn:hover{
-    filter: brightness(0.9);
-}
-.score{
-    color: green;
-    text-align: right;
-    
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+    .app-container { padding: 20px; }
+    .mode-btn { height: 40px; font-size: 0.9rem; }
 }
